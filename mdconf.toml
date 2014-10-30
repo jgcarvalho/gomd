@@ -1,0 +1,25 @@
+title = "Default MD"
+
+[forcefield]
+ff = "amber99SB-ILDN"
+water = "TIP3P"
+
+[box]
+#triclinic, cubic, dodecahedron, octahedron
+box-type = "dodecahedron"
+#distance between the solute and the solvent in nanometers
+dist = 1.0
+
+[ions]
+positive = "NA"
+negative = "CL"
+conc = 0.15
+
+[minimization]
+mdp = "minim.mdp"
+
+[equilibration]
+mdp = ["nvt.mdp", "npt.mdp"]
+
+[production]
+mdp = ["md.mdp"]
